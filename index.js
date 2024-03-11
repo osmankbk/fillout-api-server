@@ -3,7 +3,7 @@ const express = require('express');
 const axios = require('axios');
 const NodeCache = require('node-cache');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const cache = new NodeCache({ stdTTL: 600, checkperiod: 120 });
 
 const FILLOUT_API_BASE_URL = 'https://api.fillout.com/v1/api/forms';
